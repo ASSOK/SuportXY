@@ -23,15 +23,20 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
 		VALUES (null,:sbn,:serie,:tipo,:descripcion)'
 		);
 
-
-	$EQUIPO_ID_EQUIPO=1;
-	$sentencia=$conexion->prepare ("SELECT * FROM equipo where sbn=$sbn");
+	$statement1->execute(array(
+		':sbn'=>$sbn,
+		':serie'=>$serie,
+		':tipo'=>$tipo,
+		':descripcion'=>$descripcion,
+		));
+	
+	$sentencia=$conexion->prepare ("SELECT * FROM equipo where SBN='$sbn'");
 								$sentencia->execute();
 								$rec=$sentencia->fetchAll();
-								
+								$EQUIPO_ID_EQUIPO=1;
 								 foreach($rec as $post): 
 
-											
+											echo "codigo adentro"; 
 										  $EQUIPO_ID_EQUIPO=$post['ID_EQUIPO'];											
 										  echo $post['ID_EQUIPO'];
 									
@@ -43,12 +48,7 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
 		);
 
 
-	$statement1->execute(array(
-		':sbn'=>$sbn,
-		':serie'=>$serie,
-		':tipo'=>$tipo,
-		':descripcion'=>$descripcion,
-		));
+	
 
 
 
@@ -88,7 +88,7 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
 
 	/*************************************************************************************/
 	echo 'vas bien';
-		header('Location: servidor_registro.php');
+		/*header('Location: servidor_registro.php');*/
 
 	//header('Location: orden_servicio.php');
 }

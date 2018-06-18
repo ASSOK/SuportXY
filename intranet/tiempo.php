@@ -15,21 +15,24 @@ $statement1=$conexion->prepare(
 		'SELECT * FROM trabajador'
 		);
 
-
-$sentencia = $conexion -> prepare ("SELECT * FROM trabajador where Nombre='Mario Arturo Masias Vilca'");
+$nombre='Mario Arturo Masias Vilca';
+$sentencia = $conexion -> prepare ("SELECT * FROM trabajador where Nombre='$nombre'");
 								$aa=$sentencia->execute();
 								
 								$rec=$sentencia->fetchAll();
-								$cod=1;
+								
 
 								 foreach($rec as $post): 
 
 										$cod=$post['codigo'];
+										  echo "codigo adentro"; 
 										  echo $post['codigo'];
 									
 								 endforeach;
 
 
 
+								 echo "codigo afuera";
 								 echo $cod;
+
 								?>
