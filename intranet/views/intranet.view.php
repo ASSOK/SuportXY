@@ -73,14 +73,14 @@
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Menu Levels">
           <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseMulti2" data-parent="#exampleAccordion">
             <i class="fa fa-fw fa-wrench"></i>
-            <span class="nav-link-text">Servidores</span>
+            <span class="nav-link-text">Inventario</span>
           </a>
           <ul class="sidenav-second-level collapse" id="collapseMulti2">
             <li>
               <a href="nuevoservidor.php">Registrar</a>
             </li>
             <li>
-              <a href="servidor_registro.php">Ver lista de inventario en Servidores</a>
+              <a href="tablainventario.php">Ver lista de inventario </a>
             </li>
           </ul>
         </li>

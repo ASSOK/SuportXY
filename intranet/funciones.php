@@ -78,9 +78,18 @@ function fecha($fecha){
 
 function datos_realizado2($conexion){
 	//$inicio = (pagina_actual()>1) ? pagina_actual()*$post_por_pagina-$post_por_pagina:0;
-	$sentencia = $conexion -> prepare ("SELECT * FROM inventario_equipo; ");
+	$sentencia = $conexion -> prepare ("SELECT * FROM equipo e, inventario i WHERE e.ID_EQUIPO = i.EQUIPO_ID_EQUIPO and i.lugar like '%laboratorio%' ");
 	$sentencia->execute();
 	return $sentencia->fetchAll();
 }
+
+function datos_realizado3($conexion){
+	//$inicio = (pagina_actual()>1) ? pagina_actual()*$post_por_pagina-$post_por_pagina:0;
+	$sentencia = $conexion -> prepare ("SELECT * FROM equipo e, inventario i WHERE e.ID_EQUIPO = i.EQUIPO_ID_EQUIPO and i.lugar like '%salones%' ");
+	$sentencia->execute();
+	return $sentencia->fetchAll();
+}
+
+
 
  ?>

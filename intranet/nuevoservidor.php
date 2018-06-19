@@ -59,7 +59,7 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
 		));
 	/****************************************************ESTO ES UNA PRUEBA*/
 
-	$statement3=$conexion->prepare(
+	/*$statement3=$conexion->prepare(
 		'INSERT INTO lugarinventario(id,lugar)
 		VALUES (null,:lugar)'
 		);
@@ -83,7 +83,7 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
 		));
 	$statement5->execute(array(
 		':trabajador'=>$trabajador,
-		));
+		));*/
 
 
 	/*************************************************************************************/
