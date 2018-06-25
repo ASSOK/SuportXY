@@ -30,8 +30,9 @@
 						<label for="">Serie:</label>
 						<input type="text" name="serie" placeholder="SERIE">
 						<label for="">Tipo:</label>
-						<select name="tipo" id="tipo">
-							<?php 
+						<input type="text" name="tipo" placeholder="TIPO">
+						<!--<select name="tipo" id="tipo">
+							<?php /*
 									$sentencia = $conexion -> prepare ("SELECT * FROM equipo");
 									$sentencia->execute();
 									$rec2=$sentencia->fetchAll();
@@ -40,8 +41,8 @@
 										echo ">";
 										echo $row2['tipo'];
 										echo "</option>";
-									}				
-							 ?>
+									}	*/			
+							 ?>-->
 						</select>
 						<label for="">Lugar: </label>
 						<select name="lugar" id="lugar">

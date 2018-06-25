@@ -1,38 +1,39 @@
-<?php require 'intranet.view.php'; ?>
+<?php 
+require 'intranet.view.php'; ?>
 <div class="container contenido">
    <div class="row">
       <div class="col-md-12 text-center">
-        <h1>INVENTARIO DE OFICINAS</h1>
+        <h3 align="center">Asistencia por fecha</h3>
+      <div class="container">
+        
+
+        <form name="busqueda" class="buscar" action="tablaasistenciaporcodigo2.php" method="get">
+          <input type="text" name="busqueda" placeholder="Buscar">
+          <button type="submit" class="icono fa fa-search"></button>
+        </form>
+      
+      </div>
         <hr>
       </div>
     </div>
-  <div class="row">
+ 
+    <div class="row">
       <div class="col-md-12">
         <table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
             <thead>
         <tr>
-          <th>SBN</th>
-          <th>Serie</th>
-          <th>Tipo</th>
-          <th>Descripcion</th>
-          <th>Lugar</th>
+          <th>Nombre</th>
+          <th>Turno</th>
+          <th>Hora de Ingreso</th>
+          <th>Asistencia</th>
         </tr>
       </thead>
-     <tbody>   
-      <?php foreach($solicitudes as $post): ?>
-        <tr>
-          <td><?php  echo $post['SBN']?></td>
-          <td><?php  echo $post['SERIE']?></td>
-          <td><?php  echo $post['TIPO']?></td>
-          <td><?php  echo $post['DESCRIPCION']?></td>
-          <td><?php  echo $post['lugar']?></td>
-
-        </tr> 
-      <?php endforeach;?>  
-     </tbody>
+     
     </table>
   </div>
  </div>
+
+
   </div>
   <script src="../js/jquery.min.js"></script>
   <script src="../js/bootstrap.min.js"></script>

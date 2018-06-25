@@ -17,7 +17,7 @@
               </div>
               <div class="mr-5">Asistencia por Fecha</div>
             </div>
-            <a class="card-footer text-white clearfix small z-1" href="tabladeasistenciadehoy.php">
+            <a class="card-footer text-white clearfix small z-1" href="tabladeasistenciadehoy1.php">
               <span class="float-left">Aceptar</span>
               <span class="float-right">
                 <i class="fa fa-angle-right"></i>
@@ -33,7 +33,7 @@
               </div>
               <div class="mr-5">Asistencia por Codigo</div>
             </div>
-            <a class="card-footer text-white clearfix small z-1" href="tablaasistenciaporcodigo.php">
+            <a class="card-footer text-white clearfix small z-1" href="tablaasistenciaporcodigo1.php">
               <span class="float-left">Aceptar</span>
               <span class="float-right">
                 <i class="fa fa-angle-right"></i>

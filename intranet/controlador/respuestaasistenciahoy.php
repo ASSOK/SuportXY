@@ -8,7 +8,7 @@ class bolsista {
   public $dia;
   public $asistencia;
 }
-require 'admin/config.php';
+require '../admin/config.php';
 
   require 'funciones.php';
   $conexion = conexion($bd_config);

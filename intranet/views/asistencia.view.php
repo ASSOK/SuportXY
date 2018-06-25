@@ -15,7 +15,20 @@
        </div>
         <div class="col-sm-4" >
             <label for="exampleInputEmail1">Codigo</label>
-            <input class="form-control" id="valor2" aria-describedby="emailHelp" type="text" name="codigo" class="codigo" placeholder="Escribir codigo">         
+            <input class="form-control" id="valor2" aria-describedby="emailHelp" type="text" name="codigo" class="codigo" placeholder="Escribir codigo">-->
+            <select class="form-control" id="valor2" aria-describedby="emailHelp" name="codigo" class="codigo">
+                            <?php 
+                                $sentencia = $conexion -> prepare ("SELECT * FROM trabajador");
+                                $sentencia->execute();
+                                $rec=$sentencia->fetchAll();
+                                foreach($rec as $row){
+                                    echo "<option value ='".$row['codigo']."'";
+                                    echo ">";
+                                    echo $row['nombre'];
+                                    echo "</option>";
+                                }               
+                             ?>
+                        </select>         
 	  </div>
 	  <div class="col-sm-4">
 	  <br>
