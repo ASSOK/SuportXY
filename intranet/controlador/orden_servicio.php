@@ -12,7 +12,7 @@ if(isset($_SESSION['usuario'])){
 		echo 'ERROR CONEXION';
 	}
 
-	$solicitudes= datos_solicitud($conexion);
+	$solicitudes= datos_solicitud($conexion,'Pendiente');
 
 
 	if(!$solicitudes){

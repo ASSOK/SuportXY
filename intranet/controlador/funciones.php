@@ -16,28 +16,25 @@ function limpiarDatos($datos){
 	return $datos;
 }
 
-function datos_solicitud($conexion){
-	//$inicio = (pagina_actual()>1) ? pagina_actual()*$post_por_pagina-$post_por_pagina:0;
-	$sentencia = $conexion -> prepare ("SELECT * FROM solicitud_servicio where estado='Pendiente' ");
+function datos_usuarios($conexion){
+	$sentencia = $conexion -> prepare ("SELECT * FROM trabajador");
 	$sentencia->execute();
 	return $sentencia->fetchAll();
 }
 
-function datos_realizado($conexion){
-	//$inicio = (pagina_actual()>1) ? pagina_actual()*$post_por_pagina-$post_por_pagina:0;
-	$sentencia = $conexion -> prepare ("SELECT * FROM solicitud_servicio where estado='Realizado' ");
-	$sentencia->execute();
+function datos_solicitud($conexion,$estado){
+	$sentencia = $conexion -> prepare ("SELECT * FROM solicitud_servicio where estado=:estado ");
+	$sentencia->execute(array(':estado' =>$estado));
 	return $sentencia->fetchAll();
 }
 
-/*function numero_paginas($post_por_pagina,$conexion){
-	$total_post=$conexion->prepare('SELECT FOUND_ROWS() as total');
-	$total_post->execute();
-	$total_post=$total_post->fetch();
 
-	$numero_paginas=ceil($total_post/$post_por_pagina);
-	return $numero_paginas;
-}*/
+function datos_objetos($conexion,$estado){
+	$sentencia = $conexion -> prepare ("SELECT * FROM objetos_perdidos where estado=:estado ");
+	$sentencia->execute(array(':estado' =>$estado));
+	return $sentencia->fetchAll();
+}
+
 
 function pagina_actual(){
 	return isset($_GET['p']) ? (int)$_GET['p'] : 1;
@@ -65,26 +62,14 @@ function insertarAsistencia($hora , $codigoUsuario ,$codigoEmpleado){
 		));
 }
 
-function fecha($fecha){
-	$timestamp= strtotime($fecha);
-	$meses = ['Enero','Febrero','Marzo','Abril','Mayo','Junio','Agosto','Setiembre','Octubre','Noviembre','Diciembre'];
-	$dia = date('d',$timestamp);
-	$mes =date('m',$timestamp)-1;
-	$year = date('Y',$timestamp);
-
-	$fecha = "$dia de ".$meses[$mes]. " del $year";
-	return $fecha;
-}
 
 function datos_realizado2($conexion){
-	//$inicio = (pagina_actual()>1) ? pagina_actual()*$post_por_pagina-$post_por_pagina:0;
 	$sentencia = $conexion -> prepare ("SELECT * FROM equipo e, inventario i WHERE e.ID_EQUIPO = i.EQUIPO_ID_EQUIPO and i.lugar like '%laboratorio%' ");
 	$sentencia->execute();
 	return $sentencia->fetchAll();
 }
 
 function datos_realizado3($conexion){
-	//$inicio = (pagina_actual()>1) ? pagina_actual()*$post_por_pagina-$post_por_pagina:0;
 	$sentencia = $conexion -> prepare ("SELECT * FROM equipo e, inventario i WHERE e.ID_EQUIPO = i.EQUIPO_ID_EQUIPO and i.lugar like '%salones%' ");
 	$sentencia->execute();
 	return $sentencia->fetchAll();
@@ -92,7 +77,6 @@ function datos_realizado3($conexion){
 
 
 function datos_realizado4($conexion){
-	//$inicio = (pagina_actual()>1) ? pagina_actual()*$post_por_pagina-$post_por_pagina:0;
 	$sentencia = $conexion -> prepare ("SELECT * FROM equipo e, inventario i WHERE e.ID_EQUIPO = i.EQUIPO_ID_EQUIPO and i.lugar like '%Area%' ");
 	$sentencia->execute();
 	return $sentencia->fetchAll();

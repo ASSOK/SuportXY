@@ -16,10 +16,15 @@ session_start();
 
 
 	$statement=$conexion->prepare(
-		 "UPDATE solicitud_servicio SET estado='Realizado' WHERE id='".$id."'"
+		 "UPDATE objetos_perdidos SET estado='Encontrado' WHERE id='".$id."'"
 		 );
 	$statement->execute();
 
+	$statement2=$conexion->prepare(
+		 "UPDATE objetos_perdidos SET fecha= CURRENT_TIMESTAMP WHERE id='".$id."'"
+		 );
+	$statement2->execute();
+	
 	header('Location: lista_objetos_perdidos.php');
 }
  ?>

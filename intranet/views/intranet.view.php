@@ -57,22 +57,22 @@
           </a>
           <ul class="sidenav-second-level collapse" id="collapseMulti">
             <li>
-              <a href="../controlador/nuevo.php">Registro de Servicios</a>
+              <a href="../controlador/nuevo_servicio.php">Registro de Servicios</a>
             </li>
             <li>
-              <a href="../controlador/orden_servicio.php">Ver lista de servicios pendientes</a>
+              <a href="../controlador/orden_servicio.php">Lista de servicios pendientes</a>
             </li>
             <li>
-              <a href="../controlador/orden_servicio_realizado.php">Ver lista de servicios realizados</a>
+              <a href="../controlador/orden_servicio_realizado.php">Lista de servicios realizados</a>
             </li>
           </ul>
         </li>
 
 
-                  <?php /*   Agregue esto*/ ?>
+
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Menu Levels">
           <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseMulti2" data-parent="#exampleAccordion">
-            <i class="fa fa-fw fa-wrench"></i>
+            <i class="fa far fa-desktop"></i>
             <span class="nav-link-text">Inventario</span>
           </a>
           <ul class="sidenav-second-level collapse" id="collapseMulti2">
@@ -80,11 +80,48 @@
               <a href="../controlador/nuevoservidor.php">Registrar</a>
             </li>
             <li>
-              <a href="../controlador/tablainventario.php">Ver lista de inventario </a>
+              <a href="../controlador/tablainventario.php">Lista de inventario </a>
             </li>
           </ul>
         </li>
-          <?php /*   Fin*/ ?>
+
+
+
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Menu Levels">
+          <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseMulti3" data-parent="#exampleAccordion">
+            <i class="fa fas fa-eye"></i>
+            <span class="nav-link-text">Objetos Perdidos</span>
+          </a>
+          <ul class="sidenav-second-level collapse" id="collapseMulti3">
+            <li>
+              <a href="../controlador/registar_objeto_perdido.php">Registrar Objeto Perdido</a>
+            </li>
+            <li>
+              <a href="../controlador/lista_objetos_perdidos.php">Lista de Objetos Perdidos </a>
+            </li>
+             <li>
+              <a href="../controlador/lista_objetos_encontrados.php">Lista de Objetos Encontrados </a>
+            </li>
+          </ul>
+        </li>
+
+
+         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Menu Levels">
+          <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseMulti4" data-parent="#exampleAccordion">
+            <i class="fa fas fa-user"></i>
+            <span class="nav-link-text">Usuarios</span>
+          </a>
+          <ul class="sidenav-second-level collapse" id="collapseMulti4">
+            <li>
+              <a href="../controlador/registrar_bolsista.php">Registrar Usuario</a>
+            </li>
+            <li>
+              <a href="../controlador/lista_usuarios.php">Lista de Usuarios</a>
+            </li>
+          </ul>
+        </li> 
+
+
 
       </ul>
       <ul class="navbar-nav sidenav-toggler">

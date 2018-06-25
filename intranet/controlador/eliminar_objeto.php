@@ -16,8 +16,9 @@ session_start();
 
 
 	$statement=$conexion->prepare(
-		 "UPDATE solicitud_servicio SET estado='Realizado' WHERE id='".$id."'"
-		 );
+		"DELETE FROM objetos_perdidos WHERE id='".$id."'"
+		);
+
 	$statement->execute();
 
 	header('Location: lista_objetos_perdidos.php');

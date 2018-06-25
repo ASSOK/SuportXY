@@ -12,15 +12,15 @@ if(isset($_SESSION['usuario'])){
 		echo 'ERROR CONEXION';
 		//header('Location: error.php');
 	}
-
-	$solicitudes= datos_solicitud($conexion,'realizado');
+	
+	$solicitudes=  obtener_datos_inventario($conexion,'salones');
 
 
 	if(!$solicitudes){
 		echo 'ERROR POST';
 		//header('Location: error.php');
 	}
-	  require '../views/orden_servicio_realizado.view.php';
+	  require '../views/tablainventarioaulas.view.php';
 	  
 	}
 	else {

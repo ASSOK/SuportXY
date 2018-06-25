@@ -11,9 +11,9 @@
 </head>
 
 <body >
-  <img src="../imagenes/fondo2.jpg" align="center">
+  <img src="../images/fondo.jpg" align="center">
     <div class="login-box">
-      <img src="../imagenes/soporte.png" class="avatar" alt="Avatar Image">
+      <img src="../images/soporte.png" class="avatar" alt="Avatar Image">
       <h1>Login </h1>
         <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="POST" class="formulario" name="login">      
             <label for="exampleInputEmail1">Usuario</label>

@@ -10,17 +10,15 @@ if(isset($_SESSION['usuario'])){
 
 	if(!$conexion){
 		echo 'ERROR CONEXION';
-		//header('Location: error.php');
 	}
 
-	$solicitudes= datos_solicitud($conexion,'realizado');
+	$solicitudes=datos_usuarios($conexion);
 
 
 	if(!$solicitudes){
 		echo 'ERROR POST';
-		//header('Location: error.php');
 	}
-	  require '../views/orden_servicio_realizado.view.php';
+	  require '../views/lista_usuarios.view.php';
 	  
 	}
 	else {

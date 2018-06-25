@@ -9,18 +9,17 @@ if(isset($_SESSION['usuario'])){
 	$conexion = conexion($bd_config);
 
 	if(!$conexion){
-		echo 'ERROR CONEXION';
 		//header('Location: error.php');
 	}
 
-	$solicitudes= datos_solicitud($conexion,'realizado');
+	$solicitudes= datos_objetos($conexion,'Encontrado');
 
 
 	if(!$solicitudes){
 		echo 'ERROR POST';
 		//header('Location: error.php');
 	}
-	  require '../views/orden_servicio_realizado.view.php';
+	  require '../views/lista_objetos_encontrados.view.php';
 	  
 	}
 	else {

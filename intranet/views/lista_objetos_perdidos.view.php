@@ -2,7 +2,7 @@
 	<div class="container contenido">	
 		<div class="row">
 			<div class="col-md-12 text-center">
-				<h1>SERVICIOS PENDIENTES</h1>
+				<h1>OBJETOS PERDIDOS</h1>
 				<hr>
 			</div>
 		</div>	
@@ -12,10 +12,9 @@
 					<thead>
 						<tr>
 							<th>Trabajador</th>
-							<th>Cliente </th>
-							<th>Servicio</th>
+							<th>Dueño </th>
+							<th>Objeto Perdido</th>
 							<th>Lugar</th>
-							<th>Detalle</th>
 							<th>Fecha - Hora</th>
 							<th>Agregar</th>
 							<th>Eliminar</th>			
@@ -27,12 +26,11 @@
 						<tr>
 							<td><?php  echo $post['trabajador']?></td>
 							<td><?php  echo $post['usuario']?></td>
-							<td><?php  echo $post['servicio']?></td>
+							<td><?php  echo $post['descripcion']?></td>
 							<td><?php  echo $post['lugar']?></td>
-							<td><?php  echo $post['detalle']?></td>
 							<td><?php  echo $post['fecha']?></td>
-							<td><a href="actualizar.php?id=<?php echo $post['id'];?>"><button type="button" class="btn btn-succes">Realizado</button></a></td>
-							<td><a href="eliminar.php?id=<?php echo $post['id'];?>"><button type="button" class="btn btn-succes">Eliminar</button></a></td>
+							<td><a href="encontrado.php?id=<?php echo $post['id'];?>"><button type="button" class="btn btn-succes">Encontrado</button></a></td>
+							<td><a href="eliminar_objeto.php?id=<?php echo $post['id'];?>"><button type="button" class="btn btn-succes">Eliminar</button></a></td>
 						</tr>	
 						<?php endforeach;?>
 					</tbody>
