@@ -79,5 +79,5 @@
 				</article>
 				
 		</div>
-		<?php require 'footer.php';?>
+		
 	</div>
