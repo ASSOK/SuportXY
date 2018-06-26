@@ -25,7 +25,7 @@
 							<td><?php  echo $post['codigo']?></td>
 							<td><?php  echo $post['nombre']?></td>
 							<td><?php  echo $post['DNI']?></td>
-							<td><?php  echo $post['fechaNacimiento']?></td>
+							<td><?php  echo fecha($post['fechaNacimiento'])?></td>
 							<td><?php  echo $post['TipoDeTrabajador']?></td>
 						</tr>	
 						<?php endforeach;?>

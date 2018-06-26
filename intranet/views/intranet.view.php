@@ -77,7 +77,7 @@
           </a>
           <ul class="sidenav-second-level collapse" id="collapseMulti2">
             <li>
-              <a href="../controlador/nuevoservidor.php">Registrar</a>
+              <a href="../controlador/nuevo_servidor.php">Registrar</a>
             </li>
             <li>
               <a href="../controlador/tablainventario.php">Lista de inventario </a>
@@ -99,6 +99,9 @@
             <li>
               <a href="../controlador/lista_objetos_perdidos.php">Lista de Objetos Perdidos </a>
             </li>
+            <li>
+                <a href="../controlador/registrar_objeto_encontrado.php">Registrar Objeto Encontrado </a>
+             </li>
              <li>
               <a href="../controlador/lista_objetos_encontrados.php">Lista de Objetos Encontrados </a>
             </li>
@@ -113,7 +116,7 @@
           </a>
           <ul class="sidenav-second-level collapse" id="collapseMulti4">
             <li>
-              <a href="../controlador/registrar_bolsista.php">Registrar Usuario</a>
+              <a href="../controlador/registrar_trabajador.php">Registrar Usuario</a>
             </li>
             <li>
               <a href="../controlador/lista_usuarios.php">Lista de Usuarios</a>

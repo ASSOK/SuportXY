@@ -82,4 +82,16 @@ function datos_realizado4($conexion){
 	return $sentencia->fetchAll();
 }
 
+function fecha($fecha){
+	$timestamp= strtotime($fecha);
+	$meses = ['Enero','Febrero','Marzo','Abril','Mayo','Junio','Agosto','Setiembre','Octubre','Noviembre','Diciembre'];
+	$dia = date('d',$timestamp);
+	$mes =date('m',$timestamp)-1;
+	$year = date('Y',$timestamp);
+
+	$fecha = "$dia/".$meses[$mes]. "/$year";
+	return $fecha;
+}
+
+
  ?>

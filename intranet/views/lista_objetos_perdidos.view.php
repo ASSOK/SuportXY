@@ -15,7 +15,7 @@
 							<th>Dueño </th>
 							<th>Objeto Perdido</th>
 							<th>Lugar</th>
-							<th>Fecha - Hora</th>
+							<th>Fecha</th>
 							<th>Agregar</th>
 							<th>Eliminar</th>			
 						</tr>
@@ -26,9 +26,9 @@
 						<tr>
 							<td><?php  echo $post['trabajador']?></td>
 							<td><?php  echo $post['usuario']?></td>
-							<td><?php  echo $post['descripcion']?></td>
+							<td><?php  echo $post['objeto']." ".$post['descripcion']?></td>
 							<td><?php  echo $post['lugar']?></td>
-							<td><?php  echo $post['fecha']?></td>
+							<td><?php  echo fecha($post['fecha'])?></td>
 							<td><a href="encontrado.php?id=<?php echo $post['id'];?>"><button type="button" class="btn btn-succes">Encontrado</button></a></td>
 							<td><a href="eliminar_objeto.php?id=<?php echo $post['id'];?>"><button type="button" class="btn btn-succes">Eliminar</button></a></td>
 						</tr>	

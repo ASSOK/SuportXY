@@ -16,6 +16,7 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
 	$codigo=$_POST['codigo'];
 	$nombre=limpiarDatos($_POST['nombre']);
 	$DNI=limpiarDatos($_POST['DNI']);
+	$tipo=limpiarDatos($_POST['tipo']);
 	$fechaNacimiento=$_POST['fecha'];
 	$usuario=limpiarDatos($_POST['usuario']);
 	$pass1=limpiarDatos($_POST['contraseña1']);
@@ -44,14 +45,15 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
 
 	if($error==''){
 		$statement=$conexion->prepare(
-		'INSERT INTO trabajador(codigo,nombre,DNI,fechaNacimiento,usuario,pass)
-		VALUES (:codigo,:nombre,:DNI,:fechaNacimiento,:usuario,:pass)'
+		'INSERT INTO trabajador(codigo,nombre,DNI,TipoDeTrabajador,fechaNacimiento,usuario,pass)
+		VALUES (:codigo,:nombre,:DNI,:tipo,:fechaNacimiento,:usuario,:pass)'
 		);
 
 		$statement->execute(array(
 			':codigo'=>$codigo,
 			':nombre'=>$nombre,
 			':DNI'=>$DNI,
+			':tipo'=>$tipo,
 			':fechaNacimiento'=>$fechaNacimiento,
 			':usuario'=>$usuario,
 			':pass'=>$pass1,
@@ -61,6 +63,6 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
 	}
 
 }
-require '../views/registrar_bolsista.view.php';
+require '../views/registrar_trabajador.view.php';
 
  ?>

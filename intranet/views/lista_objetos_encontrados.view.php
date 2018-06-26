@@ -16,7 +16,7 @@
 							<th>Dueño </th>
 							<th>Objeto Perdido</th>
 							<th>Lugar</th>
-							<th>Fecha - Hora</th>
+							<th>Fecha de Entrega</th>
 			            </tr>
 			        </thead>
 			        <tbody>
@@ -25,9 +25,9 @@
 						<tr>
 							<td><?php  echo $post['trabajador']?></td>
 							<td><?php  echo $post['usuario']?></td>
-							<td><?php  echo $post['descripcion']?></td>
+							<td><?php  echo $post['objeto']." ".$post['descripcion']?></td>
 							<td><?php  echo $post['lugar']?></td>
-							<td><?php  echo $post['fecha']?></td>
+							<td><?php  echo fecha($post['fecha'])?></td>
 						</tr>	
 						<?php endforeach;?>
 			        </tbody>

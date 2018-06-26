@@ -119,23 +119,23 @@ CREATE TABLE IF NOT EXISTS `objetos_perdidos` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `trabajador` int(11) DEFAULT '0',
   `usuario` varchar(50) DEFAULT '0',
+  `objeto` varchar(50) DEFAULT NULL,
   `descripcion` varchar(50) DEFAULT '0',
   `lugar` varchar(50) DEFAULT '0',
-  `fecha` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+  `fecha` timestamp NULL DEFAULT CURRENT_TIMESTAMP,//fecha de recepcion
   `estado` varchar(50) DEFAULT 'Perdido',
+  `entregado_por` int(11) DEFAULT NULL,
+  `entregado_a_nombre` varchar(50) DEFAULT 'SIN REGISTRAR',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=12 ;
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=latin1;
 
---
--- Volcado de datos para la tabla `objetos_perdidos`
---
-
-INSERT INTO `objetos_perdidos` (`id`, `trabajador`, `usuario`, `descripcion`, `lugar`, `fecha`, `estado`) VALUES
-(6, 14200140, 'ronald', 'celular', 'Salon 108', '2018-06-24 21:57:05', 'Encontrado'),
-(8, 14200141, 'Jhon Macazana', 'mp3', 'Salon 106', '2018-06-24 21:55:31', 'Encontrado'),
-(9, 14200140, 'servidores', 'Cuaderno', 'Salon 207', '2018-06-24 21:53:51', 'Encontrado'),
-(10, 14200141, 'Salinas', 'mp4', 'Salon 206', '2018-06-24 21:23:57', 'Perdido'),
-(11, 14200022, 'Picapiedra', 'Maquina del decano', 'laboratorio 1', '2018-06-25 02:53:35', 'Encontrado');
+-- Volcando datos para la tabla soportel.objetos_perdidos: ~4 rows (aproximadamente)
+/*!40000 ALTER TABLE `objetos_perdidos` DISABLE KEYS */;
+INSERT INTO `objetos_perdidos` (`id`, `trabajador`, `usuario`, `objeto`, `descripcion`, `lugar`, `fecha`, `estado`, `entregado_por`, `entregado_a_nombre`) VALUES
+	(9, 14200140, 'servidores', NULL, 'Cuaderno', 'Salon 207', '2018-06-24 23:32:52', 'Perdido', 14200141, 'Andres'),
+	(11, 14200140, 'Grecia', 'Celular', 'J5 negro', 'Laboratorio 3', '2018-06-25 00:10:05', 'Encontrado', 14200144, 'PRUEBA'),
+	(12, 14200141, 'Andrea', 'USB', 'Kingston 16Gb', 'Laboratorio 8', '2018-06-25 00:04:45', 'Perdido', NULL, 'SIN REGISTRAR'),
+	(13, 14200142, 'Miguel', 'Mousepad', 'Imagen dota 2', 'Laboratorio 7', '2018-06-25 00:13:27', 'Encontrado', 14200144, 'Miguel Grau');
 
 -- --------------------------------------------------------
 

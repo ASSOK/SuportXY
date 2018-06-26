@@ -20,6 +20,12 @@
 						<label>DNI: </label>				
 						<input type="text" name="DNI" placeholder="DNI">
 
+						<label>Tipo: </label>				
+						<select name="tipo" id="tipo">
+							<option value="Pranticante">Practicante</option>
+							<option value="Bolsista">Bolsista</option>
+						</select>
+
 						<label>Fecha Nacimiento: </label>
 						<input type="date" name="fecha" placeholder="Fecha Nacimiento">
 

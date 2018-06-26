@@ -93,6 +93,6 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
 	//header('Location: orden_servicio.php');
 }
 
-require '../views/nuevoservidor1.view.php';
+require '../views/nuevo_servidor.view.php';
 
  ?>
