@@ -18,6 +18,8 @@
 				<hr>
 			</div>
 		</div>
+		<a href="../controlador/reporteserviciorealizado.php"><button type="button" class="btn btn-succes">Generar reporte PDF</button></a>
+      <?php /*   Aqui manda a generar el reporte de PDF      */ ?> 
 		<div class="row">
 			<div class="col-md-12">
 				<table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
