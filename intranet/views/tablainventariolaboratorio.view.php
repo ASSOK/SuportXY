@@ -5,7 +5,7 @@
         <h1>INVENTARIO DE LABORATORIOS</h1>
         <hr>
       </div>
-      <a href="../controlador/reportedeaulasPDF.php"><button type="button" class="btn btn-succes">Generar reporte PDF</button></a>
+      <a href="../controlador/reportedelaboratoriosPDF.php"><button type="button" class="btn btn-succes">Generar reporte PDF</button></a>
       <?php /*   Aqui manda a generar el reporte de PDF      */ ?> 
     </div>
   <div class="row">

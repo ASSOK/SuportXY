@@ -21,7 +21,7 @@
 			        </thead>
 			        <tbody>
 			           <?php foreach($solicitudes as $post): ?>
-
+						<?php var_dump($post); ?>
 						<tr>
 							<td><?php  echo $post['trabajador']?></td>
 							<td><?php  echo $post['usuario']?></td>

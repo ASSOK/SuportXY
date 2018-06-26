@@ -5,6 +5,8 @@
         <h1>INVENTARIO DE OFICINAS</h1>
         <hr>
       </div>
+      <a href="../controlador/reportedeoficinasPDF.php"><button type="button" class="btn btn-succes">Generar reporte PDF</button></a>
+      <?php /*   Aqui manda a generar el reporte de PDF      */ ?> 
     </div>
   <div class="row">
       <div class="col-md-12">

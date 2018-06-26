@@ -1,8 +1,8 @@
 <?php
-	include 'plantillaAulas.php';
+	include 'plantillaOficina.php';
 	require 'conexion.php';
 	//$query = "SELECT e.estado, m.id_municipio, m.municipio FROM t_municipio AS m INNER JOIN t_estado AS e ON m.id_estado=e.id_estado";
-	$query ="SELECT * FROM equipo e, inventario i WHERE e.ID_EQUIPO = i.EQUIPO_ID_EQUIPO and i.lugar like '%salones%'";
+	$query ="SELECT * FROM equipo e, inventario i WHERE e.ID_EQUIPO = i.EQUIPO_ID_EQUIPO and i.lugar like '%Area%'";
 	$resultado = $mysqli->query($query);
 	
 	$pdf = new PDF();
