@@ -5,6 +5,8 @@
         <h1>INVENTARIO DE LABORATORIOS</h1>
         <hr>
       </div>
+      <a href="../controlador/reportedeaulasPDF.php"><button type="button" class="btn btn-succes">Generar reporte PDF</button></a>
+      <?php /*   Aqui manda a generar el reporte de PDF      */ ?> 
     </div>
   <div class="row">
       <div class="col-md-12">
@@ -32,6 +34,7 @@
     </div>
   </div>
 </div>
+
   <script src="../js/jquery.min.js"></script>
   <script src="../js/bootstrap.min.js"></script>
   <script src="../js/jquery.dataTables.min.js"></script>
